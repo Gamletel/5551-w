@@ -1,0 +1,243 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+#mainbanner-block {
+  min-height: 600px;
+  display: flex;
+
+  .block {
+    &__text {
+      position: relative;
+      width: 50%;
+      background-color: var(--Head);
+
+      .image-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 273px;
+        height: 299px;
+        object-fit: contain;
+      }
+
+      .image-2 {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 424px;
+      height: 424px;
+      object-fit: cover;
+    }
+  }
+
+  .swiper {
+    &-text {
+      position: relative;
+      height: 100%;
+
+      .swiper-btns {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        display: none;
+        z-index: 3;
+
+        svg {
+          path {
+            stroke: var(--Background-dark);
+          }
+        }
+      }
+
+      .slide {
+        &__text {
+          display: flex;
+          flex-direction: column;
+          margin-top: 80px;
+          margin-right: 110px;
+          margin-left: 370px;
+          margin-bottom: 40px;
+
+          .top-text {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 30px;
+
+            color: var(--Stroke);
+
+            &::before {
+              content: '';
+              display: block;
+              margin-top: 10px;
+              width: 80px;
+              height: 1px;
+              opacity: 0.2;
+              background: var(--Card);
+              flex-shrink: 0;
+            }
+          }
+
+          .title {
+            margin-bottom: 15px;
+
+            color: var(--Card);
+            font-size: calcFluidFontSize(32, 60, 320, 1920);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%; /* 66px */
+          }
+
+          .subtitle {
+            color: var(--Stroke);
+          }
+
+          .btn {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+
+    &-images {
+      position: relative;
+      width: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-btns {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1919px) {
+  #mainbanner-block {
+    .block {
+      &__bg {
+        opacity: .3;
+      }
+
+      &__text {
+        .image-1 {
+          opacity: .7;
+        }
+      }
+    }
+
+    .swiper {
+      &-text {
+        .slide {
+          &__text {
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+  #mainbanner-block {
+    .swiper {
+      &-text {
+        .slide {
+          &__text {
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  #mainbanner-block {
+    .block {
+      &__text {
+        width: 100%;
+      }
+    }
+
+    .swiper {
+      &-images {
+        display: none;
+
+        .swiper-btns{
+          display: none;
+        }
+      }
+
+      &-text {
+        .swiper-btns {
+          display: flex;
+        }
+
+        .slide__text {
+          margin-top: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #mainbanner-block {
+    .swiper {
+      &-text {
+        .slide__text {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

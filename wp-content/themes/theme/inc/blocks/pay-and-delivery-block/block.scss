@@ -1,0 +1,110 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+#pay-and-delivery-block {
+  .pay {
+    margin-bottom: 30px;
+  }
+
+  .block {
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 50px;
+      border-left: 2px solid var(--accent);
+      background: var(--Background-light);
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .text-block {
+        margin-bottom: 30px;
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .icon {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          flex-shrink: 0;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 769px) {
+
+}
+
+@media (max-width: 576px) {
+  #pay-and-delivery-block {
+    .pay {
+      margin-bottom: 15px;
+    }
+
+    .block {
+      &__content {
+        padding: 25px 20px;
+
+        .title {
+          margin-bottom: 10px;
+        }
+
+        .text-block {
+          margin-bottom: 15px;
+        }
+
+        .icons {
+          gap: 10px;
+
+          .icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 498px) {
+
+}
+
+@media (max-width: 375px) {
+
+}

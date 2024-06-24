@@ -1,0 +1,55 @@
+#pay-and-delivery-block .pay {
+  margin-bottom: 30px;
+}
+#pay-and-delivery-block .block__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px;
+  border-left: 2px solid var(--accent);
+  background: var(--Background-light);
+}
+#pay-and-delivery-block .block__content .title {
+  margin-bottom: 20px;
+}
+#pay-and-delivery-block .block__content .text-block {
+  margin-bottom: 30px;
+}
+#pay-and-delivery-block .block__content .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#pay-and-delivery-block .block__content .icons .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 576px) {
+  #pay-and-delivery-block .pay {
+    margin-bottom: 15px;
+  }
+  #pay-and-delivery-block .block__content {
+    padding: 25px 20px;
+  }
+  #pay-and-delivery-block .block__content .title {
+    margin-bottom: 10px;
+  }
+  #pay-and-delivery-block .block__content .text-block {
+    margin-bottom: 15px;
+  }
+  #pay-and-delivery-block .block__content .icons {
+    gap: 10px;
+  }
+  #pay-and-delivery-block .block__content .icons .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*# sourceMappingURL=block.css.map */

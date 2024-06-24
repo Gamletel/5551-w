@@ -1,0 +1,14 @@
+#categories-block {
+  position: relative;
+}
+#categories-block .post-type-archive-product .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-color: var(--Head);
+  padding: 20px 0;
+}
+
+/*============ MEDIA ==================*/
+
+/*# sourceMappingURL=block.css.map */

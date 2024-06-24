@@ -1,0 +1,112 @@
+@import '../../../assets/css/_colors.scss';
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+#advantages-block {
+  padding: 40px 0;
+
+  &.hasBG {
+    background-color: var(--Card);
+
+    .advantages{
+      .advantage {
+        &__icon {
+          background-color: var(--Background-light);
+        }
+      }
+    }
+  }
+
+  .advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+
+    .advantage {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      &__icon {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background-color: var(--Card);
+
+        img, svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*============ MEDIA ==================*/
+@media (max-width: 1240px) {
+
+}
+
+@media (max-width: 1221px) {
+
+}
+
+@media (max-width: 1025px) {
+
+}
+
+@media (max-width: 992px) {
+  #advantages-block .advantages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 769px) {
+  #advantages-block .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #advantages-block {
+    padding: 20px 0;
+
+    .advantages {
+      grid-gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 498px) {
+  #advantages-block .advantages {
+    grid-template-columns: 1fr;
+
+    .advantage {
+      &__icon {
+        width: 50px;
+        height: 50px;
+
+        svg, img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+
+}
